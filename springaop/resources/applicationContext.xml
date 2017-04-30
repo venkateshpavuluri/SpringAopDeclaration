@@ -7,8 +7,10 @@
 	http://www.springframework.org/schema/aop
 	http://www.springframework.org/schema/aop/spring-aop-3.0.xsd ">
 	
-		<bean id="customerBo" class="com.sample.CustomerImpl" />
+	<aop:aspectj-autoproxy />
+	
+		<bean id="customerBo" class="com.springaop.customer.bo.impl.CustomerBoImpl" />
 
 	<!-- Aspect -->
-	<bean id="logAspect" class="com.aspect.Customer" />
+	<bean id="logAspect" class="com.springaop.aspect.LoggingAspect" />
 </beans>

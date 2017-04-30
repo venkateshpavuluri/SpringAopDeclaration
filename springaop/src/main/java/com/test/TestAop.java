@@ -3,13 +3,13 @@ package com.test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.sample.CustomerImpl;
+import com.springaop.customer.bo.CustomerBo;
 
 public class TestAop {
 	public static void main(String[] args) {
 		ApplicationContext applicationContext=new ClassPathXmlApplicationContext("applicationContext.xml");
-		CustomerImpl customer = (CustomerImpl) applicationContext.getBean("customerBo");
-		customer.addCustomer();
+		CustomerBo customer = (CustomerBo) applicationContext.getBean("customerBo");
+		customer.addCustomerAround("Welcome");
 		System.out.println("Done");
 	}
 
