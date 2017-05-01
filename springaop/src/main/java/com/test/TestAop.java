@@ -13,6 +13,7 @@ public class TestAop {
 		customer.addCustomer();
 		customer.addCustomerThrowException();
 		System.out.println("Done");
+		System.out.println("gv");
 	}
 
 }
